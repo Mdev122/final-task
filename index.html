@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Podmiana na samą siatkę (Grid) Bootstrapa -->
+    <link rel="stylesheet" href="vendor/bootstrap-grid.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <title>Steam &amp; Pov Moto Co.</title>
 </head>
- <body>
+<body>
 
     <!-- Header / Navigation -->
     <header class="navbar">
         <div class="logo">
-            <a href="#">Steam<span>&</span>Pov</a>
+            <a href="#">Steam<span>&amp;</span>Pov</a>
         </div>
         <nav>
             <ul class="nav-links">
@@ -23,10 +23,9 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="kontakt.html">Contact</a></li>
             </ul>
-            
         </nav>
         <div class="nav-icons">
-            <a href="#"><i class="fa fa-search" aria-hidden="true"></i></i></a>
+            <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
             <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
         </div>
     </header>
@@ -43,88 +42,85 @@
     <!-- Featured Bikes Section -->
     <section id="bikes" class="bikes-section">
         <h2 class="section-title">Featured Machines</h2>
-      <div class="container">
-        <div class="row">
-            <div class="col-4 col-sm-4 col-md-6 col-lg-12 col-xs-auto">
-                <div class="card">
-                    <img src="https://i.postimg.cc/5NKwydcY/pexels-suavoy-3663843-5921940.jpg" alt="Harley Davidson" class="card-img-top">
-                    <div class="card-body">
-                        <h5>Harley Davidson</h5>
-                        <p class="card-text">The Legendary dream of every biker</p>
-                        <i class="fa fa-dollar">50000</i>
-                        <a href="#"><i class="fa fa-shopping-cart">Add Cart</i></a>
-                        
+        <div class="container">
+            <div class="row">
+                <!-- Bike 1 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="moto-card">
+                        <img src="https://postimg.cc" alt="Harley Davidson" class="moto-card-img">
+                        <div class="moto-card-body">
+                            <h5>Harley Davidson</h5>
+                            <p class="moto-card-text">The Legendary dream of every biker</p>
+                            <p class="price"><i class="fa fa-dollar" aria-hidden="true"></i> 50000</p>
+                            <a href="#" class="btn-add-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add Cart</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-4 col-sm-4 col-md-6 col-lg-12 col-xs-auto">
-                <div class="card">
-                    <img src="https://i.postimg.cc/JngsmmDF/pexels-lpfstudio023-20662852.jpg" alt="Triumph-Red-Emperor" class="card-img-top">
-                    <div class="card-body">
-                        <h5>Triumph The Red Emperor</h5>
-                        <p>That machine take for a ride not a single county but a whole World!!!</p>
-                        <i class="fa fa-dollar">48000</i>
-                        <a href="#"><i class="fa fa-shopping-cart">Add Cart</i></a>
-                        
-            
+                <!-- Bike 2 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="moto-card">
+                        <img src="https://postimg.cc" alt="Triumph-Red-Emperor" class="moto-card-img">
+                        <div class="moto-card-body">
+                            <h5>Triumph The Red Emperor</h5>
+                            <p class="moto-card-text">That machine take for a ride not a single county but a whole World!!!</p>
+                            <p class="price"><i class="fa fa-dollar" aria-hidden="true"></i> 48000</p>
+                            <a href="#" class="btn-add-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add Cart</a>
+                        </div>
                     </div>
-                
                 </div>
-            </div>
-            <div class="col-4 col-sm-4 col-md-6 col-lg-12 col-xs-auto">
-                <div class="card">
-                    <img src="https://i.postimg.cc/ZRGJVxMn/pexels-tausif-15146886.jpg" alt="Yamaha sport bike">
-                    <div class="card-body">
-                        <h5>Yamaha-X7-World Dominator</h5>
-                        <p>Every sport got his champion.<br>This bike is a champion i his.<br>Dont think too much and enjoy its power and swiftens on the road.</p>
-                        <i class="fa fa-dollar">49000</i>
-                        <i class="fa fa-shopping-cart">Add Cart</i>
+                <!-- Bike 3 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="moto-card">
+                        <img src="https://postimg.cc" alt="Yamaha sport bike" class="moto-card-img">
+                        <div class="moto-card-body">
+                            <h5>Yamaha-X7-World Dominator</h5>
+                            <p class="moto-card-text">Every sport got his champion.<br>This bike is a champion in his.<br>Dont think too much and enjoy its power and swiftness on the road.</p>
+                            <p class="price"><i class="fa fa-dollar" aria-hidden="true"></i> 49000</p>
+                            <a href="#" class="btn-add-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add Cart</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-      </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services-section">
         <h2 class="section-title">Workshop Services</h2>
-        <div class="grid-container">
-            <div class="service-box">
-                <i class="fa fa-wrench"></i>
-                <h3>Custom Builds</h3>
-                <p>We-made modifications designed around your riding style.</p>
-            </div>
-            <div class="service-box">
-                <i class="fa fa-motorcycle" aria-hidden="true"></i>
-                
-                
-            
-                <h3>Maintenance</h3>
-                <p>Precision tuning, engine rebuilds, and routine servicing.</p>
-            </div>
-            <div class="service-box">
-                <i class='fa fa-cog'></i>
-                <h3>Premium Parts</h3>
-                <p>High-grade performance components and hand-stitched leather gear.</p>
+        <div class="container">
+            <div class="grid-container">
+                <div class="service-box">
+                    <i class="fa fa-wrench" aria-hidden="true"></i>
+                    <h3>Custom Builds</h3>
+                    <p>We-made modifications designed around your riding style.</p>
+                </div>
+                <div class="service-box">
+                    <i class="fa fa-motorcycle" aria-hidden="true"></i>
+                    <h3>Maintenance</h3>
+                    <p>Precision tuning, engine rebuilds, and routine servicing.</p>
+                </div>
+                <div class="service-box">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                    <h3>Premium Parts</h3>
+                    <p>High-grade performance components and hand-stitched leather gear.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer id="contact">
-        <div class="footer-content">
-            <p>&copy; 2026 Steam & Pov Moto Co. All Rights Reserved.</p>
-            <div class="socials">
-                <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Dpl_PL"><i class="fa fa-facebook-f"></i></a>
-                <a href="https://www.youtube.com/?gl=PL&hl=pl&app=desktop"><i class="fa fa-youtube-play"></i></a>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Steam &amp; Pov Moto Co. All Rights Reserved.</p>
+                <div class="socials">
+                    <a href="https://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://facebook.com"><i class="fa fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://youtube.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                </div>
             </div>
         </div>
     </footer>
 
-    
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
