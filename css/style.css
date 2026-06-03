@@ -1,0 +1,300 @@
+/* --- Variables & Configuration --- */
+/* --- Base Styles --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #111111;
+  color: #ffffff;
+  padding-top: 80px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Shared Components & Layouts --- */
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.bikes-section,
+.services-section {
+  padding: 100px 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #ff5500;
+  color: #ffffff;
+  padding: 14px 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: rgb(214.2, 71.4, 0);
+  transform: translateY(-2px);
+}
+
+/* --- Custom Navigation Bar --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background-color: rgba(17, 17, 17, 0.95);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #222222;
+}
+.navbar .logo a {
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+.navbar .logo span {
+  color: #ff5500;
+}
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+}
+.navbar .nav-links li {
+  margin: 0 20px;
+}
+.navbar .nav-links a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+}
+.navbar .nav-links a:hover {
+  color: #ff5500;
+}
+.navbar .nav-icons {
+  display: flex;
+  align-items: center;
+}
+.navbar .nav-icons a {
+  margin-left: 20px;
+  font-size: 1.1rem;
+  transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+}
+.navbar .nav-icons a:hover {
+  color: #ff5500;
+}
+
+/* --- Hero Section --- */
+.hero {
+  height: calc(100vh - 80px);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgb(17, 17, 17)), linear-gradient(45deg, #222222, #111111);
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+}
+.hero-content h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  color: #aaaaaa;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+/* --- Custom Moto Cards --- */
+.moto-card {
+  background-color: #1a1a1a;
+  border: 1px solid #222222;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.moto-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff5500;
+}
+.moto-card-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-bottom: 1px solid #222222;
+}
+.moto-card-body {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.moto-card-body h5 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+.moto-card-text {
+  color: #aaaaaa;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+.moto-card .price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ff5500;
+  margin-bottom: 15px;
+}
+.moto-card .price i {
+  margin-right: 5px;
+}
+.moto-card .btn-add-cart {
+  display: block;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+}
+.moto-card .btn-add-cart i {
+  margin-right: 8px;
+}
+.moto-card .btn-add-cart:hover {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+/* --- Workshop Services (CSS Grid + Bootstrap Container) --- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.service-box {
+  background-color: #1a1a1a;
+  padding: 40px 30px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+.service-box:hover {
+  border-color: rgba(255, 85, 0, 0.4);
+}
+.service-box i {
+  font-size: 3rem;
+  color: #ff5500;
+  margin-bottom: 20px;
+}
+.service-box h3 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+.service-box p {
+  color: #aaaaaa;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #0a0a0a;
+  padding: 40px 0;
+  border-top: 1px solid #222222;
+}
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+footer .footer-content p {
+  color: #aaaaaa;
+  font-size: 0.9rem;
+}
+footer .socials {
+  display: flex;
+  align-items: center;
+}
+footer .socials a {
+  font-size: 1.3rem;
+  margin-left: 25px;
+  color: #aaaaaa;
+  transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+}
+footer .socials a:hover {
+  color: #ff5500;
+}
+
+/* --- Responsive Layout (Mobile Optimization) --- */
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+  .navbar {
+    padding: 15px 5%;
+  }
+  .navbar .nav-links {
+    display: none;
+  }
+  .hero {
+    height: calc(100vh - 70px);
+    padding: 0 5%;
+  }
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  .bikes-section,
+  .services-section {
+    padding: 60px 0;
+  }
+  footer .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  footer .footer-content .socials {
+    margin-top: 10px;
+    justify-content: center;
+  }
+  footer .footer-content .socials a {
+    margin: 0 15px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

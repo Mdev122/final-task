@@ -24,6 +24,9 @@ body {
     background-color: $bg-dark;
     color: $text-light;
     padding-top: 80px; 
+    -webkit-font-smoothing: antialiased; // Lepsze renderowanie czcionek na MacOS/iOS
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden; // Zabezpieczenie przed przypadkowym skrolowaniem na boki
 }
 
 a {
@@ -56,6 +59,7 @@ a {
     text-transform: uppercase;
     transition: $transition-btn;
     border: none;
+    cursor: pointer;
 
     &:hover {
         background-color: darken($accent-color, 8%);
@@ -70,9 +74,11 @@ a {
     align-items: center;
     padding: 20px 8%;
     background-color: rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(5px); // Modny efekt rozmycia tła pod menu
     position: fixed;
-    width: 100%;
     top: 0;
+    left: 0;   // POPRAWKA: Rozciągnięcie od lewej
+    right: 0;  // POPRAWKA: Do prawej krawędzi (eliminuje błąd poziomego skrola)
     z-index: 1000;
     border-bottom: 1px solid $border-color;
 
@@ -121,7 +127,7 @@ a {
             }
         }
     }
-}
+} 
 
 /* --- Hero Section --- */
 .hero {
