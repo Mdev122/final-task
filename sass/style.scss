@@ -16,7 +16,6 @@ $transition-btn: background-color 0.3s, transform 0.2s;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: $font-main;
     scroll-behavior: smooth;
 }
 
@@ -24,6 +23,7 @@ body {
     background-color: $bg-dark;
     color: $text-light;
     padding-top: 80px; 
+     font-family: $font-main;
     -webkit-font-smoothing: antialiased; // Lepsze renderowanie czcionek na MacOS/iOS
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden; // Zabezpieczenie przed przypadkowym skrolowaniem na boki
@@ -354,4 +354,7 @@ footer {
             }
         }
     }
+}
+.fa {
+    font-family: 'FontAwesome' !important;
 }

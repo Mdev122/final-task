@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -12,6 +11,7 @@ body {
   background-color: #111111;
   color: #ffffff;
   padding-top: 80px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -295,6 +295,9 @@ footer .socials a:hover {
   footer .footer-content .socials a {
     margin: 0 15px;
   }
+}
+.fa {
+  font-family: "FontAwesome" !important;
 }
 
 /*# sourceMappingURL=style.css.map */
